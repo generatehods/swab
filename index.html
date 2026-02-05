@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Swap</title>
+    <script src="https://terminal.jup.ag/main-v2.js"></script>
+</head>
+<body style="background-color: #000; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+
+    <div id="integrated-terminal" style="width: 100%; max-width: 420px; padding: 10px;"></div>
+
+    <script>
+        window.Jupiter.init({
+            displayMode: "integrated",
+            integratedTargetId: "integrated-terminal",
+            endpoint: "https://api.mainnet-beta.solana.com",
+            formProps: {
+                initialInputMint: "So11111111111111111111111111111111111111112",
+                initialOutputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            },
+        });
+    </script>
+</body>
+</html>
+
