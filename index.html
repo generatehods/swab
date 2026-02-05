@@ -2,25 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solana Swap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jupiter Direct Swab</title>
     <script src="https://terminal.jup.ag/main-v2.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden; /* Mencegah scroll double */
+        }
+        #integrated-terminal {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
-<body style="background-color: #000; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+<body>
 
-    <div id="integrated-terminal" style="width: 100%; max-width: 420px; padding: 10px;"></div>
+    <div id="integrated-terminal"></div>
 
     <script>
         window.Jupiter.init({
             displayMode: "integrated",
             integratedTargetId: "integrated-terminal",
             endpoint: "https://api.mainnet-beta.solana.com",
+            strictTokenList: false, // Agar semua token muncul
             formProps: {
-                initialInputMint: "So11111111111111111111111111111111111111112",
-                initialOutputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+                initialInputMint: "So11111111111111111111111111111111111111112", // SOL
+                initialOutputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", // USDC
             },
         });
     </script>
 </body>
 </html>
-
